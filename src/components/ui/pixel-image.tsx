@@ -26,6 +26,7 @@ interface PixelImageProps {
   pixelFadeInDuration?: number; // in ms
   maxAnimationDelay?: number; // in ms
   colorRevealDelay?: number; // in ms
+  animate?: boolean;
 }
 
 export const PixelImage = ({
@@ -36,6 +37,7 @@ export const PixelImage = ({
   maxAnimationDelay = 1200,
   colorRevealDelay = 1300,
   customGrid,
+  animate = false,
 }: PixelImageProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [showColor, setShowColor] = useState(false);
@@ -62,6 +64,8 @@ export const PixelImage = ({
   }, [customGrid, grid]);
 
   useEffect(() => {
+    if (!animate) return;
+
     const total = rows * cols;
     const delays = Array.from(
       { length: total },
@@ -73,7 +77,7 @@ export const PixelImage = ({
       setShowColor(true);
     }, colorRevealDelay);
     return () => clearTimeout(colorTimeout);
-  }, [rows, cols, maxAnimationDelay, colorRevealDelay]);
+  }, [rows, cols, maxAnimationDelay, colorRevealDelay, animate]);
 
   const pieces = useMemo(() => {
     const total = rows * cols;
@@ -85,7 +89,9 @@ export const PixelImage = ({
       const clipPath = `polygon(
         ${col * (100 / cols) - overlap}% ${row * (100 / rows) - overlap}%,
         ${(col + 1) * (100 / cols) + overlap}% ${row * (100 / rows) - overlap}%,
-        ${(col + 1) * (100 / cols) + overlap}% ${(row + 1) * (100 / rows) + overlap}%,
+        ${(col + 1) * (100 / cols) + overlap}% ${
+        (row + 1) * (100 / rows) + overlap
+      }%,
         ${col * (100 / cols) - overlap}% ${(row + 1) * (100 / rows) + overlap}%
       )`;
 

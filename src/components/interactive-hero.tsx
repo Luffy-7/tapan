@@ -76,8 +76,8 @@ export function InteractiveHero() {
             variants={itemVariants}
             className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white leading-tight"
           >
-            Monkey D.{" "}
-            <span className="text-blue-600 dark:text-blue-400">Luffy</span>
+            <span className="text-blue-600 dark:text-blue-400">Tapan </span>
+            Kumar Swain
           </motion.h1>
 
           <motion.p

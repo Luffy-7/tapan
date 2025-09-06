@@ -1,4 +1,5 @@
 "use client";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
@@ -25,6 +26,7 @@ import { MobileNav } from "@/components/mobile-nav";
 import { InteractiveHero } from "@/components/interactive-hero";
 import { ThemeDebug } from "@/components/theme-debug";
 import { FluidCursor } from "@/components/fluid-cursor";
+import { PixelImage } from "@/components/ui/pixel-image";
 
 export default function Portfolio() {
   const { scrollYProgress } = useScroll();
@@ -128,9 +130,9 @@ export default function Portfolio() {
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold text-slate-900 dark:text-white"
+            className="text-2xl font-bold text-blue-600 dark:text-white"
           >
-            Luffy
+            Tapan _
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -182,20 +184,11 @@ export default function Portfolio() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-16 items-center">
-              <motion.div
-                whileHover={{
-                  scale: 1.02,
-                  boxShadow:
-                    "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-                }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <Image
-                  src="/placeholder.svg?height=500&width=400"
-                  alt="Luffy - Software Developer"
-                  width={400}
-                  height={500}
-                  className="rounded-2xl shadow-2xl mx-auto"
+              <motion.div className="mx-auto">
+                <PixelImage
+                  src="/profile.jpeg"
+                  customGrid={{ rows: 8, cols: 8 }}
+                  grayscaleAnimation
                 />
               </motion.div>
               <div>

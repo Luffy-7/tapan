@@ -124,7 +124,7 @@ export function FluidCursor() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Set blend mode for fluid effect
-      ctx.globalCompositeOperation = isDark ? "screen" : "normal";
+      ctx.globalCompositeOperation = isDark ? "screen" : "source-over";
 
       // Draw fluid particles with metaball effect
       for (const particle of particlesRef.current) {
@@ -162,7 +162,7 @@ export function FluidCursor() {
       }
 
       // Add connecting lines for fluid effect (reduced intensity)
-      ctx.globalCompositeOperation = isDark ? "screen" : "normal";
+      ctx.globalCompositeOperation = isDark ? "screen" : "source-over";
       ctx.lineWidth = 0.8;
 
       for (let i = 0; i < particlesRef.current.length; i++) {

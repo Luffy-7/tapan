@@ -155,3 +155,8 @@ html {
   background-size: 200% 200%;
   animation: gradient 15s ease infinite;
 }
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}

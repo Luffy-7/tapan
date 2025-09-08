@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ThemeToggle } from "./theme-toggle";
 import { MobileNav } from "./mobile-nav";
+import { AnimatedThemeToggler } from "./animated-theme-toggler";
 
 const Navbar = () => {
   return (
@@ -33,12 +34,12 @@ const Navbar = () => {
               </motion.a>
             )
           )}
-          <ThemeToggle />
+          <AnimatedThemeToggler />
         </div>
 
         {/* Mobile Navigation */}
         <div className="flex md:hidden items-center space-x-4">
-          <ThemeToggle />
+          <AnimatedThemeToggler />
           <MobileNav />
         </div>
       </div>

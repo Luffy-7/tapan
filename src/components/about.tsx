@@ -9,7 +9,7 @@ const About = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   return (
     <section
-      id="A"
+      id="about"
       ref={ref}
       className="py-24 bg-white dark:bg-slate-950 transition-colors duration-300"
     >

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ThemeToggle } from "./theme-toggle";
 import { MobileNav } from "./mobile-nav";
 import { AnimatedThemeToggler } from "./animated-theme-toggler";
 

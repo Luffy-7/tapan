@@ -40,22 +40,27 @@ const About = () => {
             </motion.div>
             <div>
               <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                I'm a passionate Software Development Engineer with 2+ years of
-                experience building scalable web applications. I specialize in
-                creating efficient, maintainable solutions that solve real-world
-                problems.
+                I’m a passionate Software Development Engineer with 2+ years of
+                experience building scalable web and mobile applications. I
+                specialize in creating efficient, maintainable solutions that
+                solve real-world problems and deliver great user experiences
+                across platforms.
               </p>
               <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-                Currently working at TechCorp Solutions, I focus on full-stack
-                development using modern technologies like React, Node.js, and
-                cloud platforms. I'm committed to writing clean code and
-                following best practices.
+                Currently working at Hyscaler (formerly NetTantra), I specialize
+                in full-stack development with a strong focus on modern web and
+                mobile technologies such as React, React Native, and Next.js.
+                I’m passionate about building scalable applications, writing
+                clean and maintainable code, and following industry best
+                practices. I also enjoy working with cloud platforms and
+                exploring new tools to deliver efficient, high-quality
+                solutions.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   <span className="text-slate-700 dark:text-slate-300">
-                    San Francisco, CA
+                    Bhubaneswar, Odisha
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
